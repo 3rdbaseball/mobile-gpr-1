@@ -1,0 +1,8 @@
+{
+  "tenants": [
+    { "id": "generic", "name": "GPR Demo", "configUrl": "generic.json" },
+    { "id": "acme", "name": "Acme Pay", "configUrl": "acme.json" },
+    { "id": "northwind", "name": "Northwind Card", "configUrl": "northwind.json" },
+    { "id": "bluefinch", "name": "Bluefinch Money", "configUrl": "bluefinch.json" }
+  ]
+}

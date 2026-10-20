@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1.0",
+  "configVersion": "2026.10.19-1",
+
+  "tenant": {
+    "id": "northwind",
+    "displayName": "Northwind Card",
+    "legalName": "Northwind Payroll Services, LLC",
+    "issuerDisclosure": "The Northwind Card Mastercard® Payroll Card is issued by Example Bank, Member FDIC. Fictional program for demonstration."
+  },
+
+  "branding": {
+    "colorSchemeMode": "light",
+    "colors": {
+      "light": {
+        "primary": "#14532D",
+        "onPrimary": "#FFFFFF",
+        "secondary": "#CA8A04",
+        "onSecondary": "#1C1300",
+        "background": "#F6F7F2",
+        "surface": "#FFFFFF",
+        "textPrimary": "#1A2E1F",
+        "textSecondary": "#4D5B50",
+        "border": "#DDE3D8",
+        "success": "#15803D",
+        "warning": "#B45309",
+        "danger": "#B91C1C"
+      }
+    },
+    "shape": { "radius": 4, "buttonStyle": "square" }
+  },
+
+  "navigation": {
+    "tabs": [
+      { "id": "home", "feature": "home", "label": "Home", "icon": "home" },
+      { "id": "card", "feature": "card", "label": "Card", "icon": "credit-card" },
+      { "id": "payday", "feature": "reload", "label": "Payday", "icon": "payments" },
+      { "id": "help", "feature": "help", "label": "Help", "icon": "help-outline" },
+      { "id": "profile", "feature": "account", "label": "Profile", "icon": "person-outline" }
+    ],
+    "accountMenu": [
+      { "type": "feature", "feature": "profile", "label": "Personal details" },
+      { "type": "feature", "feature": "verifyIdentity", "label": "Verify identity" },
+      { "type": "feature", "feature": "statements", "label": "Pay statements" },
+      { "type": "feature", "feature": "notifications", "label": "Payday alerts" },
+      { "type": "feature", "feature": "security", "label": "Security" },
+      { "type": "link", "url": "https://example.com/northwind/employer", "label": "Employer portal", "icon": "business" },
+      { "type": "feature", "feature": "legal", "label": "Legal" },
+      { "type": "action", "action": "signOut", "label": "Sign out" }
+    ],
+    "homeSections": ["balance", "quickActions", "kycBanner", "recentTransactions"],
+    "quickActions": ["directDeposit", "reload", "cardFreeze", "cardControls"]
+  },
+
+  "reload": {
+    "methods": ["directDeposit", "ach", "debitCard"]
+  },
+
+  "kyc": {
+    "tierLabels": { "basic": "Standard", "full": "Payroll Plus" }
+  },
+
+  "support": {
+    "phone": "+1-800-555-0142",
+    "email": "cardholders@example.com",
+    "hours": "Mon–Sat 6am–10pm CT"
+  },
+
+  "content": {
+    "faq": [
+      { "q": "When does my pay arrive?", "a": "Pay is usually available on payday morning once your employer sends it." },
+      { "q": "How do I set up direct deposit?", "a": "Open Payday, choose Direct deposit, and share the routing and account numbers with your employer." },
+      { "q": "Can I get cash?", "a": "Yes. Use any in-network ATM after you verify your identity." }
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "1.0",
+  "configVersion": "2026.10.19-1",
+
+  "tenant": {
+    "id": "generic",
+    "displayName": "GPR Demo",
+    "legalName": "GPR Demo",
+    "issuerDisclosure": "The GPR Demo Prepaid Card is issued by Example Bank, Member FDIC. Fictional program for demonstration."
+  },
+
+  "branding": {
+    "colorSchemeMode": "system",
+    "colors": {
+      "light": {
+        "primary": "#334155",
+        "onPrimary": "#FFFFFF",
+        "secondary": "#0369A1",
+        "onSecondary": "#FFFFFF",
+        "background": "#F8FAFC",
+        "surface": "#FFFFFF",
+        "textPrimary": "#0F172A",
+        "textSecondary": "#475569",
+        "border": "#E2E8F0",
+        "success": "#15803D",
+        "warning": "#B45309",
+        "danger": "#B91C1C"
+      },
+      "dark": {
+        "primary": "#CBD5E1",
+        "onPrimary": "#0F172A",
+        "secondary": "#38BDF8",
+        "onSecondary": "#082F49",
+        "background": "#0B1120",
+        "surface": "#162032",
+        "textPrimary": "#F1F5F9",
+        "textSecondary": "#94A3B8",
+        "border": "#23304A",
+        "success": "#4ADE80",
+        "warning": "#FBBF24",
+        "danger": "#F87171"
+      }
+    },
+    "shape": { "radius": 8, "buttonStyle": "rounded" }
+  },
+
+  "navigation": {
+    "tabs": [
+      { "id": "home", "feature": "home", "label": "Home", "icon": "home" },
+      { "id": "card", "feature": "card", "label": "Card", "icon": "credit-card" },
+      { "id": "money", "feature": "reload", "label": "Add Money", "icon": "add-circle-outline" },
+      { "id": "account", "feature": "account", "label": "Account", "icon": "person-outline" }
+    ],
+    "accountMenu": [
+      { "type": "feature", "feature": "profile", "label": "Profile" },
+      { "type": "feature", "feature": "verifyIdentity", "label": "Verify identity" },
+      { "type": "feature", "feature": "statements", "label": "Statements" },
+      { "type": "feature", "feature": "notifications", "label": "Notifications" },
+      { "type": "feature", "feature": "security", "label": "Security" },
+      { "type": "feature", "feature": "help", "label": "Help & support" },
+      { "type": "feature", "feature": "legal", "label": "Legal" },
+      { "type": "action", "action": "signOut", "label": "Sign out" }
+    ],
+    "homeSections": ["balance", "kycBanner", "quickActions", "recentTransactions"],
+    "quickActions": ["reload", "cardFreeze", "cardDetails", "transactions"]
+  },
+
+  "features": {
+    "physicalCard": true,
+    "cardControls": true,
+    "directDeposit": true,
+    "statements": true
+  },
+
+  "reload": {
+    "methods": ["ach", "debitCard", "directDeposit"]
+  },
+
+  "kyc": {
+    "tierLabels": { "basic": "Basic", "full": "Full" }
+  },
+
+  "support": {
+    "phone": "+1-800-555-0199",
+    "email": "support@example.com",
+    "hours": "Every day, 7am–11pm ET"
+  },
+
+  "content": {
+    "faq": [
+      { "q": "How do I add money?", "a": "Open Add Money and choose a bank transfer, a debit card, or direct deposit." },
+      { "q": "What if I lose my card?", "a": "Freeze it right away from the card screen, then report it lost or stolen to get a replacement." },
+      { "q": "How do I raise my limits?", "a": "Verify your identity from the Account tab to unlock higher limits." }
+    ]
+  }
+}

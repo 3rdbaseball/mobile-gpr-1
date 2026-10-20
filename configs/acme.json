@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0",
+  "configVersion": "2026.10.18-1",
+
+  "tenant": {
+    "id": "acme",
+    "displayName": "Acme Pay",
+    "legalName": "Acme Pay, Inc.",
+    "issuerDisclosure": "The Acme Pay Visa® Prepaid Card is issued by Example Bank, Member FDIC. Fictional program for demonstration."
+  },
+
+  "branding": {
+    "colorSchemeMode": "dark",
+    "colors": {
+      "dark": {
+        "primary": "#3FB8AF",
+        "onPrimary": "#062421",
+        "secondary": "#F2B84B",
+        "onSecondary": "#2A1E05",
+        "background": "#0F1519",
+        "surface": "#1A232A",
+        "textPrimary": "#E6EDF2",
+        "textSecondary": "#94A3AE",
+        "border": "#2A3640",
+        "success": "#4ADE80",
+        "warning": "#FBBF24",
+        "danger": "#F87171"
+      }
+    },
+    "shape": { "radius": 12, "buttonStyle": "rounded" }
+  },
+
+  "navigation": {
+    "tabs": [
+      { "id": "home", "feature": "home", "label": "Home", "icon": "home" },
+      { "id": "card", "feature": "card", "label": "My Card", "icon": "credit-card" },
+      { "id": "money", "feature": "reload", "label": "Add Money", "icon": "add-circle-outline" },
+      { "id": "account", "feature": "account", "label": "Account", "icon": "person-outline" }
+    ],
+    "accountMenu": [
+      { "type": "feature", "feature": "profile", "label": "Profile" },
+      { "type": "feature", "feature": "verifyIdentity", "label": "Verify identity" },
+      { "type": "feature", "feature": "statements", "label": "Statements" },
+      { "type": "feature", "feature": "notifications", "label": "Notifications" },
+      { "type": "feature", "feature": "security", "label": "Security" },
+      { "type": "feature", "feature": "help", "label": "Help & support" },
+      { "type": "link", "url": "https://example.com/acme/rewards", "label": "Rewards", "icon": "card-giftcard" },
+      { "type": "feature", "feature": "legal", "label": "Legal" },
+      { "type": "action", "action": "signOut", "label": "Sign out" }
+    ],
+    "homeSections": ["balance", "kycBanner", "quickActions", "recentTransactions"],
+    "quickActions": ["reload", "cardFreeze", "cardDetails", "directDeposit"]
+  },
+
+  "features": {
+    "physicalCard": true,
+    "cardControls": true,
+    "directDeposit": true,
+    "statements": true
+  },
+
+  "reload": {
+    "methods": ["ach", "debitCard", "directDeposit"]
+  },
+
+  "kyc": {
+    "tierLabels": { "basic": "Starter", "full": "Verified" }
+  },
+
+  "support": {
+    "phone": "+1-800-555-0100",
+    "email": "help@example.com",
+    "hours": "Mon–Fri 8am–8pm ET"
+  },
+
+  "content": {
+    "faq": [
+      { "q": "How do I add money?", "a": "Open Add Money and choose a bank transfer, a debit card, or direct deposit." },
+      { "q": "What if I lose my card?", "a": "Open My Card and tap Report lost or stolen. We block the card and send a replacement." },
+      { "q": "How do I raise my limits?", "a": "Verify your identity from the Account tab to move up to the Verified tier." }
+    ]
+  }
+}

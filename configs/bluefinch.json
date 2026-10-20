@@ -1,0 +1,86 @@
+{
+  "schemaVersion": "1.0",
+  "configVersion": "2026.10.19-1",
+
+  "tenant": {
+    "id": "bluefinch",
+    "displayName": "Bluefinch Money",
+    "legalName": "Bluefinch Money, Inc.",
+    "issuerDisclosure": "The Bluefinch Visa® Prepaid Card is issued by Example Bank, Member FDIC. Fictional program for demonstration."
+  },
+
+  "branding": {
+    "colorSchemeMode": "system",
+    "colors": {
+      "light": {
+        "primary": "#6D28D9",
+        "onPrimary": "#FFFFFF",
+        "secondary": "#F97362",
+        "onSecondary": "#3B0A02",
+        "background": "#FAF7FF",
+        "surface": "#FFFFFF",
+        "textPrimary": "#1E1033",
+        "textSecondary": "#5B4B73",
+        "border": "#E9E1F7",
+        "success": "#15803D",
+        "warning": "#B45309",
+        "danger": "#B91C1C"
+      },
+      "dark": {
+        "primary": "#A78BFA",
+        "onPrimary": "#1E0B45",
+        "secondary": "#FB8A7C",
+        "onSecondary": "#3B0A02",
+        "background": "#120A1F",
+        "surface": "#1E1430",
+        "textPrimary": "#F3EEFF",
+        "textSecondary": "#B3A6CC",
+        "border": "#33264A",
+        "success": "#4ADE80",
+        "warning": "#FBBF24",
+        "danger": "#F87171"
+      }
+    },
+    "shape": { "radius": 20, "buttonStyle": "pill" }
+  },
+
+  "navigation": {
+    "tabs": [
+      { "id": "wallet", "feature": "home", "label": "Wallet", "icon": "account-balance-wallet" },
+      { "id": "topup", "feature": "reload", "label": "Top Up", "icon": "bolt" },
+      { "id": "me", "feature": "account", "label": "Me", "icon": "face" }
+    ],
+    "accountMenu": [
+      { "type": "feature", "feature": "card", "label": "My virtual card" },
+      { "type": "feature", "feature": "profile", "label": "Profile" },
+      { "type": "feature", "feature": "verifyIdentity", "label": "Level up to Plus" },
+      { "type": "link", "url": "https://example.com/bluefinch/rewards", "label": "Rewards", "icon": "card-giftcard" },
+      { "type": "feature", "feature": "notifications", "label": "Notifications" },
+      { "type": "feature", "feature": "security", "label": "Security" },
+      { "type": "feature", "feature": "help", "label": "Get help" },
+      { "type": "action", "action": "signOut", "label": "Sign out" }
+    ],
+    "homeSections": ["balance", "quickActions", "recentTransactions", "kycBanner"],
+    "quickActions": ["reload", "card", "cardFreeze", "cardDetails"]
+  },
+
+  "features": {
+    "physicalCard": false,
+    "cardControls": false,
+    "statements": false
+  },
+
+  "reload": {
+    "methods": ["debitCard", "ach", "directDeposit"]
+  },
+
+  "kyc": {
+    "tierLabels": { "basic": "Lite", "full": "Plus" }
+  },
+
+  "support": {
+    "phone": "+1-800-555-0167",
+    "email": "hey@example.com",
+    "hours": "Every day, 24/7 chat · phone 9am–9pm ET"
+  }
+}
