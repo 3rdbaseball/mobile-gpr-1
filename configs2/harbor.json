@@ -1,0 +1,492 @@
+{
+  "schemaVersion": "2.0",
+  "configVersion": "2026.10.26-1",
+  "tenant": {
+    "id": "harbor",
+    "displayName": "Harbor Credit",
+    "legalName": "Harbor Credit Co. (fictional)",
+    "defaultLocale": "en-US",
+    "supportedLocales": [
+      "en-US"
+    ]
+  },
+  "theme": {
+    "colorSchemeMode": "system",
+    "colors": {
+      "light": {
+        "primary": "#0E7490",
+        "onPrimary": "#FFFFFF",
+        "secondary": "#C2410C",
+        "onSecondary": "#FFFFFF",
+        "accent": "#F97316",
+        "onAccent": "#1C0A00",
+        "background": "#F5F7F8",
+        "surface": "#FFFFFF",
+        "surfaceAlt": "#ECF6F8",
+        "textPrimary": "#0B2530",
+        "textSecondary": "#3F5560",
+        "textMuted": "#5E717B",
+        "border": "#D3DEE3",
+        "divider": "#E7EEF1",
+        "headerBackground": "#0E7490",
+        "onHeader": "#FFFFFF",
+        "onHeaderMuted": "#E0F2F7",
+        "heroCard": "#FFFFFF26",
+        "tabBarBackground": "#FFFFFF",
+        "tabActive": "#C2410C",
+        "tabInactive": "#5E717B",
+        "link": "#C2410C",
+        "success": "#15803D",
+        "successContainer": "#DCFCE7",
+        "warning": "#92400E",
+        "warningContainer": "#FEF3C7",
+        "danger": "#B91C1C",
+        "dangerContainer": "#FEE2E2",
+        "info": "#0E7490",
+        "infoContainer": "#E0F2F7",
+        "disabled": "#DCE3E6",
+        "onDisabled": "#5E717B",
+        "scrim": "#0B253099"
+      },
+      "dark": {
+        "primary": "#5CC8E0",
+        "onPrimary": "#062029",
+        "secondary": "#FB923C",
+        "onSecondary": "#1C0A00",
+        "accent": "#FB923C",
+        "onAccent": "#1C0A00",
+        "background": "#0A1A20",
+        "surface": "#12262E",
+        "surfaceAlt": "#18323C",
+        "textPrimary": "#E6F1F4",
+        "textSecondary": "#B4C6CD",
+        "textMuted": "#93A9B2",
+        "border": "#2A4450",
+        "divider": "#1F3741",
+        "headerBackground": "#0B3A49",
+        "onHeader": "#FFFFFF",
+        "onHeaderMuted": "#C7E3EB",
+        "heroCard": "#FFFFFF1F",
+        "tabBarBackground": "#12262E",
+        "tabActive": "#FB923C",
+        "tabInactive": "#93A9B2",
+        "link": "#FDBA74",
+        "success": "#4ADE80",
+        "successContainer": "#123524",
+        "warning": "#FBBF24",
+        "warningContainer": "#3A2C08",
+        "danger": "#F87171",
+        "dangerContainer": "#3F1717",
+        "info": "#5CC8E0",
+        "infoContainer": "#0F3340",
+        "disabled": "#2A3B42",
+        "onDisabled": "#93A9B2",
+        "scrim": "#000000AA"
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "body": "OpenSans",
+        "heading": "OpenSans",
+        "numeric": "OpenSans"
+      }
+    },
+    "radius": {
+      "card": 10,
+      "sheet": 16,
+      "md": 8,
+      "lg": 10
+    },
+    "elevation": {
+      "style": "shadow"
+    }
+  },
+  "components": {
+    "button": {
+      "shape": "rounded",
+      "primary": "filled",
+      "secondary": "tonal"
+    },
+    "card": {
+      "style": "elevated"
+    },
+    "quickActions": {
+      "style": "tile",
+      "columns": 4
+    },
+    "header": {
+      "titleAlign": "left"
+    },
+    "sheet": {
+      "handle": false
+    }
+  },
+  "layouts": {
+    "home": {
+      "hero": [
+        {
+          "type": "greeting",
+          "variant": "welcomeBack"
+        },
+        {
+          "type": "accountsOverview"
+        }
+      ],
+      "sections": [
+        {
+          "type": "quickActions",
+          "items": [
+            "transactions",
+            "payment",
+            "directDeposit",
+            "messages"
+          ]
+        },
+        {
+          "type": "messagesBanner",
+          "style": "card",
+          "visibleWhen": {
+            "hasUnreadMessages": true
+          }
+        },
+        {
+          "type": "activationBanner",
+          "visibleWhen": {
+            "hasCardStatus": [
+              "shipped"
+            ]
+          }
+        },
+        {
+          "type": "recentTransactions",
+          "count": 4,
+          "account": "credit"
+        }
+      ]
+    },
+    "transactions": {
+      "header": {
+        "actions": [
+          "messages"
+        ]
+      },
+      "hero": [],
+      "sections": [
+        {
+          "type": "accountTabs",
+          "accounts": [
+            "credit",
+            "deposit"
+          ]
+        },
+        {
+          "type": "balanceSummary",
+          "variant": "compact",
+          "account": "selected",
+          "fields": [
+            "currentBalance",
+            "availableCredit",
+            "availableBalance"
+          ]
+        },
+        {
+          "type": "transactionList",
+          "search": true,
+          "filter": true,
+          "groupBy": "month"
+        }
+      ]
+    },
+    "cardList": {
+      "sections": [
+        {
+          "type": "activationBanner",
+          "visibleWhen": {
+            "hasCardStatus": [
+              "shipped"
+            ]
+          }
+        },
+        {
+          "type": "cardList",
+          "layout": "carousel"
+        },
+        {
+          "type": "featureLink",
+          "feature": "directDeposit",
+          "icon": "account-balance"
+        }
+      ]
+    },
+    "more": {
+      "sections": [
+        {
+          "type": "supportCard"
+        },
+        {
+          "type": "menu",
+          "menu": "more"
+        },
+        {
+          "type": "appVersion"
+        }
+      ]
+    },
+    "profile": {
+      "sections": [
+        {
+          "type": "identityHeader",
+          "fields": [
+            "name",
+            "email"
+          ]
+        },
+        {
+          "type": "menu",
+          "menu": "profile"
+        },
+        {
+          "type": "signOutButton"
+        },
+        {
+          "type": "appVersion"
+        }
+      ]
+    },
+    "cardDetails": {
+      "sections": [
+        {
+          "type": "cardArtSecure"
+        },
+        {
+          "type": "activationBanner"
+        },
+        {
+          "type": "lostCardNotice"
+        },
+        {
+          "type": "cardActions",
+          "items": [
+            "status",
+            "changePin",
+            "cardLock",
+            "reportLost",
+            "replaceCard"
+          ]
+        },
+        {
+          "type": "supportCard"
+        },
+        {
+          "type": "disclosure"
+        }
+      ]
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "id": "home",
+        "feature": "home",
+        "icon": "home"
+      },
+      {
+        "id": "cards",
+        "feature": "cards",
+        "icon": "credit-card"
+      },
+      {
+        "id": "payment",
+        "feature": "payment",
+        "icon": "payments"
+      },
+      {
+        "id": "more",
+        "feature": "more",
+        "icon": "menu"
+      },
+      {
+        "id": "profile",
+        "feature": "profile",
+        "icon": "person-outline"
+      }
+    ],
+    "menus": {
+      "more": {
+        "style": "list",
+        "items": [
+          {
+            "type": "feature",
+            "feature": "transactions",
+            "icon": "receipt-long"
+          },
+          {
+            "type": "feature",
+            "feature": "messages",
+            "icon": "mail-outline"
+          },
+          {
+            "type": "feature",
+            "feature": "directDeposit",
+            "icon": "account-balance"
+          },
+          {
+            "type": "feature",
+            "feature": "contactUs",
+            "icon": "support-agent"
+          },
+          {
+            "type": "feature",
+            "feature": "faq",
+            "icon": "help-outline"
+          },
+          {
+            "type": "feature",
+            "feature": "legal",
+            "icon": "gavel"
+          },
+          {
+            "type": "feature",
+            "feature": "closeAccount",
+            "icon": "logout"
+          }
+        ]
+      },
+      "profile": {
+        "style": "list",
+        "items": [
+          {
+            "type": "feature",
+            "feature": "manageProfile",
+            "icon": "badge"
+          },
+          {
+            "type": "feature",
+            "feature": "notifications",
+            "icon": "notifications-none"
+          },
+          {
+            "type": "feature",
+            "feature": "changePassword",
+            "icon": "vpn-key"
+          },
+          {
+            "type": "feature",
+            "feature": "biometrics",
+            "display": "toggle",
+            "icon": "fingerprint"
+          },
+          {
+            "type": "feature",
+            "feature": "twoStep",
+            "icon": "shield"
+          }
+        ]
+      }
+    },
+    "headerActions": {
+      "default": [
+        "help"
+      ],
+      "home": [
+        "messages"
+      ]
+    }
+  },
+  "features": {
+    "hideBalanceToggle": true
+  },
+  "featureSettings": {
+    "transactions": {
+      "datePresets": [
+        "last7Days",
+        "last30Days",
+        "last90Days",
+        "yearToDate"
+      ],
+      "typeFilter": "detailed"
+    },
+    "payments": {
+      "quickAmounts": [
+        2500,
+        5000,
+        "currentBalance"
+      ]
+    },
+    "cardDetails": {
+      "revealMode": "tapToReveal",
+      "autoHideSeconds": 30,
+      "showCustomerReference": false
+    },
+    "greeting": {
+      "useFirstName": true
+    }
+  },
+  "labels": {
+    "accounts": {
+      "credit": "Card",
+      "deposit": "Security deposit"
+    },
+    "cardStatus": {
+      "frozen": "Frozen"
+    },
+    "cardLock": {
+      "lock": "Freeze card",
+      "unlock": "Unfreeze card"
+    }
+  },
+  "assets": {
+    "logo": {
+      "light": "asset:hb-logo",
+      "dark": "asset:hb-logo-white"
+    },
+    "logoOnHeader": "asset:hb-logo-white",
+    "logoMark": "asset:hb-mark",
+    "headerPattern": null,
+    "cardArt": {
+      "default": "asset:hb-card",
+      "byFormat": {},
+      "byArtKey": {}
+    }
+  },
+  "support": {
+    "phone": "+1-800-555-0199",
+    "email": "care@example.com",
+    "hours": "Every day, 7am–10pm ET"
+  },
+  "content": {
+    "legalFooter": "Harbor Credit is a fictional brand used for demonstration.",
+    "strings": {
+      "en-US": {
+        "signIn.title": "Sign in to Harbor",
+        "signIn.subtitle": "Your secured card, anywhere",
+        "home.quickActions.title": "Shortcuts"
+      }
+    },
+    "faq": {
+      "en-US": {
+        "categories": [
+          {
+            "title": "Getting started",
+            "items": [
+              {
+                "q": "How do I turn on my card?",
+                "a": "Go to Cards, open your new card and tap Activate. Have the card and the activation code from your letter ready."
+              },
+              {
+                "q": "Can I freeze my card?",
+                "a": "Yes. Open the card and tap Freeze card. Unfreeze it whenever you like."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "build": {
+    "appName": "Harbor Credit",
+    "bundleId": "com.example.harbor",
+    "androidPackage": "com.example.harbor",
+    "scheme": "harborcredit"
+  }
+}

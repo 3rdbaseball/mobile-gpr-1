@@ -1,0 +1,7 @@
+{
+  "defaultTenant": "firstnative",
+  "tenants": [
+    { "id": "firstnative", "label": "First Native", "configUrl": "firstnative.json" },
+    { "id": "harbor", "label": "Harbor Credit (fictional)", "configUrl": "harbor.json" }
+  ]
+}

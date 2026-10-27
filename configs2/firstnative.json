@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "2.0",
+  "configVersion": "2026.10.26-1",
+  "tenant": {
+    "id": "firstnative",
+    "displayName": "First Native",
+    "legalName": "First Native, LLC",
+    "defaultLocale": "en-US",
+    "supportedLocales": ["en-US"]
+  },
+  "theme": {
+    "colorSchemeMode": "light",
+    "colors": {
+      "light": {
+        "primary": "#0A203A",
+        "onPrimary": "#FFFFFF",
+        "secondary": "#00A8AC",
+        "onSecondary": "#0A203A",
+        "accent": "#EFD75D",
+        "onAccent": "#0A203A",
+        "background": "#F3F4F6",
+        "surface": "#FFFFFF",
+        "surfaceAlt": "#F1F3F5",
+        "textPrimary": "#0A203A",
+        "textSecondary": "#4B5563",
+        "textMuted": "#6B7280",
+        "border": "#D9DEE3",
+        "divider": "#ECEFF2",
+        "headerBackground": "#0A203A",
+        "onHeader": "#FFFFFF",
+        "onHeaderMuted": "#D4E9EB",
+        "heroCard": "#FFFFFF1A",
+        "tabBarBackground": "#FFFFFF",
+        "tabActive": "#007A7D",
+        "tabInactive": "#6B7280",
+        "link": "#007A7D",
+        "success": "#16723A",
+        "successContainer": "#DFF3E6",
+        "warning": "#8A6A00",
+        "warningContainer": "#FBF3C9",
+        "danger": "#B4232C",
+        "dangerContainer": "#FCE4E6",
+        "info": "#007A7D",
+        "infoContainer": "#E6F6F6",
+        "disabled": "#D1D3D4",
+        "onDisabled": "#6B7280",
+        "scrim": "#0A203A99"
+      }
+    },
+    "typography": {
+      "fontFamily": { "body": "Poppins", "heading": "Poppins", "numeric": "Poppins" }
+    }
+  },
+  "components": {
+    "button": { "shape": "pill" },
+    "header": { "style": "solid" },
+    "quickActions": { "style": "circle", "columns": 3 }
+  },
+  "layouts": {
+    "signIn": {
+      "sections": [{ "type": "brandHero", "pattern": true }, { "type": "signInForm" }]
+    }
+  },
+  "features": {
+    "adminLinks": true
+  },
+  "labels": {
+    "accounts": { "credit": "Credit Account", "deposit": "Deposit Account" },
+    "balances": { "availableCredit": "Available Balance" },
+    "cardStatus": { "shipped": "Shipped", "active": "Active", "frozen": "Suspended" },
+    "cardLock": { "lock": "Suspend Card", "unlock": "Unblock Card" }
+  },
+  "assets": {
+    "logo": { "light": "asset:fn-logo", "dark": "asset:fn-logo-white" },
+    "logoOnHeader": "asset:fn-logo-white",
+    "logoMark": "asset:fn-mark",
+    "headerPattern": "asset:fn-pattern",
+    "cardArt": { "default": "asset:fn-card", "byFormat": {}, "byArtKey": {} }
+  },
+  "support": { "phone": "+1-800-555-0142", "email": "help@example.com", "hours": "Mon–Fri, 8am–8pm CT" },
+  "legal": {
+    "brandPrivacyPolicy": { "url": "https://www.firstnative.com/", "version": "1" },
+    "appTermsOfUse": { "url": "https://www.firstnative.com/", "version": "1" }
+  },
+  "content": {
+    "legalFooter": "© 2026 First Native, LLC. All rights reserved.",
+    "strings": {
+      "en-US": {
+        "signIn.title": "Welcome!",
+        "signIn.subtitle": "Enter your credentials"
+      }
+    },
+    "faq": {
+      "en-US": {
+        "categories": [
+          {
+            "title": "Your card",
+            "items": [
+              { "q": "How do I activate my card?", "a": "Open the card from Home and tap “Activate Now!”. Enter the details from your physical card. You can set your PIN straight after." },
+              { "q": "How do I see my full card number?", "a": "Open the card and tap “Show card details”. You will confirm it’s you first. The numbers hide again after a minute." },
+              { "q": "What if my card is lost or stolen?", "a": "Open the card, choose Suspend/Lost/Stolen Card, and report it. Lost or stolen cards are blocked permanently. Call us to order a replacement." }
+            ]
+          },
+          {
+            "title": "Payments and balances",
+            "items": [
+              { "q": "How do I pay my credit balance?", "a": "Tap Payment on Home. Payments are made from your Deposit Account to your Credit Account." },
+              { "q": "What is the difference between my two accounts?", "a": "Your Deposit Account holds the security deposit. Your Credit Account is what your card spends from and what you pay back." }
+            ]
+          },
+          {
+            "title": "Direct deposit",
+            "items": [
+              { "q": "Where do I find my direct deposit details?", "a": "Tap Direct Deposit Info on Home or Transactions. You’ll need to confirm it’s you to see the full account number." }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "build": {
+    "appName": "First Native",
+    "bundleId": "com.gigawright.gprapp2",
+    "androidPackage": "com.gigawright.gprapp2",
+    "scheme": "gprapp2",
+    "icon": "./assets/images/icon.png",
+    "splash": { "image": "./assets/images/splash-icon.png", "backgroundColor": "#0A203A" }
+  }
+}
