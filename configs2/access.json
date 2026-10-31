@@ -1,6 +1,6 @@
 {
   "enabled": true,
-  "expiresOn": "2026-10-29",
+  "expiresOn": "2026-10-31",
   "unlock": {
     "salt": "faf5b45d91963ac4cd548adac3b15f57",
     "sha256": "b672e22d600ffc486661a4002488bdc445e8ef5129f5adeecc02a76182220c09"
