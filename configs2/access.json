@@ -1,5 +1,5 @@
 {
-  "enabled": true,
+  "enabled": false,
   "expiresOn": "2026-11-01",
   "unlock": {
     "salt": "faf5b45d91963ac4cd548adac3b15f57",
