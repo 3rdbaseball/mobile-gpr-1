@@ -62,7 +62,7 @@
     }
   },
   "features": {
-    "adminLinks": true
+    "adminLinks": false
   },
   "labels": {
     "accounts": { "credit": "Credit Account", "deposit": "Deposit Account" },
@@ -83,6 +83,12 @@
     "appTermsOfUse": { "url": "https://www.firstnative.com/", "version": "1" }
   },
   "content": {
+    "messages": {
+      "en-US": [
+        { "id": "m-2026-11-01", "title": "Your statement is ready", "body": "Your latest statement is now available. Review it to see your balance, payments and activity for the month.", "createdAt": "2026-11-01" },
+        { "id": "m-2026-11-05", "title": "Keep your contact details up to date", "body": "Make sure your phone number and email address are current so we can reach you about important account activity.", "createdAt": "2026-11-05" }
+      ]
+    },
     "legalFooter": "© 2026 First Native, LLC. All rights reserved.",
     "strings": {
       "en-US": {
@@ -94,24 +100,20 @@
       "en-US": {
         "categories": [
           {
-            "title": "Your card",
-            "items": [
-              { "q": "How do I activate my card?", "a": "Open the card from Home and tap “Activate Now!”. Enter the details from your physical card. You can set your PIN straight after." },
-              { "q": "How do I see my full card number?", "a": "Open the card and tap “Show card details”. You will confirm it’s you first. The numbers hide again after a minute." },
-              { "q": "What if my card is lost or stolen?", "a": "Open the card, choose Suspend/Lost/Stolen Card, and report it. Lost or stolen cards are blocked permanently. Call us to order a replacement." }
-            ]
-          },
-          {
             "title": "Payments and balances",
             "items": [
-              { "q": "How do I pay my credit balance?", "a": "Tap Payment on Home. Payments are made from your Deposit Account to your Credit Account." },
-              { "q": "What is the difference between my two accounts?", "a": "Your Deposit Account holds the security deposit. Your Credit Account is what your card spends from and what you pay back." }
+              { "q": "How do I pay my credit balance?", "a": "Tap Payment on Home. Choose the amount and review it. Payments are made from your Deposit Account to your Credit Account." },
+              { "q": "What is the difference between my two accounts?", "a": "Your Deposit Account holds the security deposit. Your Credit Account is what your card spends from and what you pay back." },
+              { "q": "Where can I see my transactions?", "a": "Tap Transactions on Home. Switch between your Credit Account and Deposit Account, and use search or filter to find a transaction." }
             ]
           },
           {
-            "title": "Direct deposit",
+            "title": "Your profile and security",
             "items": [
-              { "q": "Where do I find my direct deposit details?", "a": "Tap Direct Deposit Info on Home or Transactions. You’ll need to confirm it’s you to see the full account number." }
+              { "q": "How do I change my password?", "a": "Open the Profile tab and tap Edit Password. If you forgot it, tap Forgot password on the sign-in screen." },
+              { "q": "How do I update my address, phone or email?", "a": "Open the Profile tab and tap Manage Profile. Choose what to edit. We send you a code before your change is saved." },
+              { "q": "How do I set my card PIN?", "a": "Open your card from the list on Home and tap Manage PIN. Choose 4 digits and enter them twice to confirm." },
+              { "q": "Where do I find Important Messages?", "a": "Tap the messages banner on Home. Tap a message to read it." }
             ]
           }
         ]
